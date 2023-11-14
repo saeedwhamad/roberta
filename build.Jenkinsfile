@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    enviroment{
+    environment {
     aws_url = '933060838752.dkr.ecr.eu-west-1.amazonaws.com'
     repo_name = 'roberta_saeedha'
     }
