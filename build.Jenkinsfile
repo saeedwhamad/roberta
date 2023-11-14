@@ -15,12 +15,13 @@ pipeline {
 
             }
         }
-    }
+
     stage('Trigger Deploy') {
         steps {
             build job: 'reobertadeploy', wait: false, parameters: [
                 string(name: 'ROBERTA_IMAGE_URL', value: "$aws_url/$repo_name:$BUILD_NUMBER")
             ]
         }
+}
 }
 }
