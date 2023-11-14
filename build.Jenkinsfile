@@ -4,7 +4,7 @@ pipeline {
     stages {
     stage('aws install'){
     steps{
-    sh 'sudo apt update && sudo apt install awscli'
+    sh 'sudo apt update && sudo apt install awscli -y '
       }
      }
         stage('Build') {
