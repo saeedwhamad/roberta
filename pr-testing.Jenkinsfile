@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Unittest') {
             steps {
-                sh 'exit 5'
+                sh 'exit 5 '
             }
         }
         stage('Lint') {
