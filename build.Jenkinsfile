@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+    docker {
+        image '<image-url>'
+        args  '--user root -v /var/run/docker.sock:/var/run/docker.sock'
+    }
+}
     environment {
     aws_url = '933060838752.dkr.ecr.eu-west-1.amazonaws.com'
     repo_name = 'roberta_saeedha'

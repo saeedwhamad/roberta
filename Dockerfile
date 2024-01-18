@@ -7,7 +7,6 @@ RUN pip install -r requirements.txt
 RUN  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && apt-get install git-lfs
 
 COPY . .
-
 RUN git clone https://huggingface.co/SamLowe/roberta-base-go_emotions
 
 CMD ["python3", "app.py"]
